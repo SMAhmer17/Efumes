@@ -27,7 +27,7 @@ export function Navbar() {
         <div className="flex items-center">
           <Link href="/">
             <img 
-              alt="efumes! logo" 
+              alt="Efumes Pest Control logo" 
               className="h-10 w-auto object-contain hover:scale-105 transition-transform duration-300" 
               src="/logo.png"
             />

@@ -13,8 +13,8 @@ export function Footer() {
           <div className="lg:col-span-5">
             <Link href="/">
               <img 
-                alt="efumes! logo" 
-                className="h-10 w-auto object-contain mb-8 filter invert brightness-0 hover:scale-105 transition-transform duration-300" 
+                alt="Efumes logo" 
+                className="h-12 w-auto object-contain mb-8 filter invert brightness-0 hover:scale-105 transition-transform duration-300" 
                 src="/logo.png"
               />
             </Link>
@@ -67,7 +67,7 @@ export function Footer() {
         </div>
         
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-slate-500 text-sm">© 2024 efumes! Pest Control. Clinical Precision in Pest Management.</p>
+          <p className="text-slate-500 text-sm">© {new Date().getFullYear()} Efumes. All rights reserved.</p>
           <div className="flex gap-8 text-sm">
             <Link className="text-slate-500 hover:text-white transition-colors" href="/privacy">Privacy Policy</Link>
             <Link className="text-slate-500 hover:text-white transition-colors" href="/terms">Terms of Service</Link>

@@ -10,8 +10,11 @@ const publicSans = Public_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Professional Fumigation & Pest Control",
-  description: "Expert fumigation and pest control services for home and business.",
+  title: "Efumes | Clinical Precision in Pest Control",
+  description: "Expert fumigation and pest management services tailored for safety, speed, and total eradication. Certified experts protecting your home and business.",
+  icons: {
+    icon: '/logo.png',
+  },
 };
 
 export default function RootLayout({
