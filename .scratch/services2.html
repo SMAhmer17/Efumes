@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>efumes! - Professional Pest Management Services</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed": "#2f1500",
+                        "primary": "#914c00",
+                        "on-primary": "#ffffff",
+                        "inverse-on-surface": "#f0f1f2",
+                        "on-error": "#ffffff",
+                        "outline": "#887364",
+                        "primary-container": "#f38d2c",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-container": "#403b3c",
+                        "tertiary-fixed": "#e9e0e1",
+                        "secondary-container": "#76fd98",
+                        "surface": "#f8f9fa",
+                        "on-secondary-container": "#007435",
+                        "surface-variant": "#e1e3e4",
+                        "on-tertiary-fixed": "#1e1b1c",
+                        "tertiary-fixed-dim": "#cdc4c5",
+                        "primary-fixed-dim": "#ffb77e",
+                        "surface-container": "#edeeef",
+                        "on-error-container": "#93000a",
+                        "inverse-surface": "#2e3132",
+                        "secondary": "#006d31",
+                        "secondary-fixed": "#76fd98",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-container": "#5e3000",
+                        "inverse-primary": "#ffb77e",
+                        "on-secondary-fixed": "#00210a",
+                        "error": "#ba1a1a",
+                        "background": "#f8f9fa",
+                        "surface-container-high": "#e7e8e9",
+                        "surface-container-highest": "#e1e3e4",
+                        "on-background": "#191c1d",
+                        "tertiary-container": "#aca5a6",
+                        "on-primary-fixed-variant": "#6e3900",
+                        "on-surface": "#191c1d",
+                        "secondary-fixed-dim": "#58e07f",
+                        "on-surface-variant": "#554336",
+                        "on-tertiary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "surface-tint": "#914000",
+                        "outline-variant": "#dbc2b0",
+                        "on-secondary-fixed-variant": "#005323",
+                        "surface-bright": "#f8f9fa",
+                        "tertiary": "#635d5e",
+                        "surface-dim": "#d9dadb",
+                        "on-tertiary-fixed-variant": "#4b4546",
+                        "surface-container-low": "#f3f4f5",
+                        "primary-fixed": "#ffdcc3"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "xs": "4px",
+                        "gutter": "24px",
+                        "xl": "80px",
+                        "md": "24px",
+                        "sm": "12px",
+                        "base": "8px",
+                        "lg": "48px",
+                        "margin": "32px"
+                    },
+                    "fontFamily": {
+                        "headline-xl": ["Public Sans"],
+                        "body-md": ["Public Sans"],
+                        "headline-lg": ["Public Sans"],
+                        "body-lg": ["Public Sans"],
+                        "label-md": ["Public Sans"],
+                        "headline-md": ["Public Sans"],
+                        "caption": ["Public Sans"]
+                    },
+                    "fontSize": {
+                        "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "caption": ["12px", {"lineHeight": "16px", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Public Sans', sans-serif;
+            background-color: #f8f9fa;
+        }
+    </style>
+</head>
+<body class="antialiased text-on-surface">
+<!-- TopNavBar -->
+<header class="sticky top-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
+<nav class="flex justify-between items-center px-6 md:px-12 py-3 max-w-7xl mx-auto">
+<div class="flex items-center gap-2">
+<img alt="efumes! logo" class="h-10 md:h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0uixOX0u0hu19FfDQCgmnDTm0u0hgbnHqhbOYwJsR12dPX0sP96DbIvnmabgD646Dc3Kz1N-kdEXCyMeO8GVR6Oi-zXRJ_77LW8fc40SqUQnNI_wYCAEFEDbIdEk0fueQEaDepwpKHBecTsCYmZYMatAkWwC0YFjo0tDRpmzjWcnxnTKB6rq7mdFcgs9-IcP6p8GdgfDZK51flBmxhvU5NxXTpoV7I4n6dUxvicNV3vdDxbFglQNDzlj7PXFjHGqz5k3Ru_ISaDS"/>
+</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-slate-600 font-medium hover:text-primary transition-all duration-200" href="#">Home</a>
+<a class="text-primary font-bold border-b-2 border-primary pb-1" href="#">Services</a>
+<a class="text-slate-600 font-medium hover:text-primary transition-all duration-200" href="#">Safety</a>
+<a class="text-slate-600 font-medium hover:text-primary transition-all duration-200" href="#">About</a>
+</div>
+<div class="flex gap-4">
+<button class="hidden md:block px-4 py-2 text-primary font-semibold hover:bg-primary/5 transition-colors active:scale-95 duration-150">Emergency</button>
+<button class="bg-primary-container text-white px-6 py-2 rounded-lg font-bold hover:shadow-lg active:scale-95 transition-all duration-150">Book Now</button>
+</div>
+</nav>
+</header>
+<main class="max-w-7xl mx-auto px-6 md:px-12">
+<!-- Hero Section -->
+<section class="py-xl text-center md:text-left">
+<div class="flex flex-col md:flex-row items-center gap-lg">
+<div class="md:w-1/2">
+<div class="inline-flex items-center gap-2 bg-secondary-container/30 text-secondary px-3 py-1 rounded-full mb-md">
+<span class="material-symbols-outlined text-sm">verified_user</span>
+<span class="font-label-md text-xs uppercase tracking-widest">Certified Pest Experts</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface mb-md">Clinical Precision in <span class="text-primary-container">Pest Elimination</span></h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mb-lg leading-relaxed">
+                        We combine industrial-strength expertise with domestic safety. From residential prevention to heavy-duty commercial fumigation, <strong>efumes!</strong> delivers absolute results.
+                    </p>
+<div class="flex flex-wrap gap-md justify-center md:justify-start">
+<button class="bg-primary-container text-on-primary font-bold px-lg py-4 rounded-lg hover:shadow-xl hover:-translate-y-0.5 transition-all">Start Free Inspection</button>
+<button class="border-2 border-secondary text-secondary font-bold px-lg py-4 rounded-lg hover:bg-secondary hover:text-white transition-all">View Our Pricing</button>
+</div>
+</div>
+<div class="md:w-1/2 rounded-2xl overflow-hidden shadow-2xl aspect-[4/3] relative">
+<img class="w-full h-full object-cover" data-alt="A clean, professionally lit indoor environment showing a pest control specialist in a modern, non-intimidating white uniform using high-precision equipment near a clinical white wall." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNX_dzm4E2xkKSaNg-8wudvrUnHY1Md-4gGwO16qK5Qy03gNRVEoK_5QG5ur-SGPKz_7eC1pHsQLT5cT-3pgU2rY0d9XHEXZz0cwwgiuszmhk4wURmGZvlEAu5V00zswU8ICuy1bF5SThPuHiJOhWwUmi9zfJXE7NwUiiDwG3PWs0ltr-kKuPcXAcDoOV7hK7yDRiO1QaWtXfvvl7ALwUgxhvFtq_5W8cbqjEh47O5KaNfQK9fNh3tpcS853YiGLNzk1XTgi4bSChA"/>
+</div>
+</div>
+</section>
+<!-- Services Bento Grid -->
+<section class="py-xl">
+<div class="text-center mb-xl">
+<h2 class="font-headline-lg text-headline-lg mb-xs">Comprehensive Solutions</h2>
+<p class="text-on-surface-variant font-body-md">Tailored strategies for every environment and infestation level.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-md h-full">
+<!-- Residential - Featured Card -->
+<div class="md:col-span-8 bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden flex flex-col group hover:shadow-xl transition-all duration-300">
+<div class="p-lg flex-1">
+<div class="flex items-center gap-sm mb-md text-primary-container">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-label-md text-label-md uppercase tracking-wider">Most Popular</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-sm">Residential Protection</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-lg max-w-lg">
+                            Keep your home a sanctuary with our non-invasive, family-safe prevention plans. We target entry points and common breeding grounds with clinical precision.
+                        </p>
+<ul class="grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-sm mb-lg">
+<li class="flex items-center gap-xs text-on-surface-variant"><span class="material-symbols-outlined text-secondary text-base">check_circle</span> Seasonal barrier maintenance</li>
+<li class="flex items-center gap-xs text-on-surface-variant"><span class="material-symbols-outlined text-secondary text-base">check_circle</span> Eco-friendly interior treatments</li>
+<li class="flex items-center gap-xs text-on-surface-variant"><span class="material-symbols-outlined text-secondary text-base">check_circle</span> Emergency rapid response</li>
+<li class="flex items-center gap-xs text-on-surface-variant"><span class="material-symbols-outlined text-secondary text-base">check_circle</span> Pet &amp; family safe protocols</li>
+</ul>
+</div>
+<div class="h-72 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A modern, minimalist residential living room with clean lines and warm lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdEjRXuUO4wDkAYF0PvfGZniIvC1OY_HkEvTYNDozjlMmWLRXKBrR8StEbxO3lP12_VvIgdC9W2rZHtelwxWTpmev4H-gsgypglFSyhesBxzac9EEuEPtMY7raO37n-zz3Tv91SnghgyNS4NeIXD1DG5JADwBYrsi8sC_3M4reCofmrZDQznlhOno0NLDfsgpTZohoqXGzHJcJRre-C-P7RWFXQOtdEWIpTr-_Z5hyOZEoLsGzZwnsKfVrLBh24L2dcGvds0qdiYI0"/>
+</div>
+</div>
+<!-- Commercial -->
+<div class="md:col-span-4 bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden flex flex-col hover:shadow-xl transition-all duration-300">
+<div class="p-lg flex-1">
+<div class="w-14 h-14 bg-secondary/10 text-secondary rounded-xl flex items-center justify-center mb-md">
+<span class="material-symbols-outlined text-3xl" data-icon="domain">domain</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-sm">Commercial Precision</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md leading-relaxed">
+                            Scale-specific pest management for restaurants, warehouses, and corporate offices. Zero-downtime solutions that protect your reputation.
+                        </p>
+</div>
+<div class="p-lg pt-0">
+<button class="w-full py-4 bg-secondary text-white font-bold rounded-lg hover:bg-secondary/90 transition-colors shadow-lg shadow-secondary/20">Get Business Quote</button>
+</div>
+</div>
+<!-- Termite Solutions -->
+<div class="md:col-span-6 bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden flex flex-col md:flex-row hover:shadow-xl transition-all duration-300">
+<div class="p-lg md:w-1/2 flex flex-col justify-center">
+<div class="bg-primary-fixed text-on-primary-fixed w-12 h-12 rounded-full flex items-center justify-center mb-md">
+<span class="material-symbols-outlined" data-icon="construction">construction</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-sm">Termite Defense</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Advanced detection and thermal elimination technologies to protect your property's structural integrity.
+                        </p>
+</div>
+<div class="md:w-1/2 h-48 md:h-auto">
+<img class="w-full h-full object-cover" data-alt="Detailed macro shot of high-quality architectural wood structures with specialized sensors." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUS8A7_RrCnrDF8BW3_8t0jstmVAWLKm-1A4wQP1Qd2izV6O6QVonPKe7C_A2zmrFpRYvD-6SAEIogIUGJ5mlKWW3QMdHAXHQIYgH0a0HnvPolSLDQq-Bu7Rdg2dLHDFm5yjA0LfOPdwyXLOdpB56HWQOYvuc1I2bERV8XqlLumAnQCGjQ-dEVILLGx5d1ZYA-dNT02h9exdpMnfmkvbd1jn4JbQHY1sYEESwyJlWj8e5WSYxnHXEG87OqmdOwv5GXTLM3O4yaZp9P"/>
+</div>
+</div>
+<!-- Fumigation -->
+<div class="md:col-span-6 bg-slate-900 rounded-2xl shadow-xl overflow-hidden flex flex-col md:flex-row hover:shadow-2xl transition-all duration-300">
+<div class="p-lg md:w-1/2 text-white flex flex-col justify-center">
+<div class="bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center mb-md">
+<span class="material-symbols-outlined" data-icon="science">science</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-sm">Expert Fumigation</h3>
+<p class="font-body-md text-body-md text-slate-400">
+                            Total eradication for complex infestations. Clinical-grade protocols with 100% resolution guarantee.
+                        </p>
+</div>
+<div class="md:w-1/2 relative h-48 md:h-auto">
+<div class="absolute inset-0 bg-primary/20 mix-blend-overlay"></div>
+<img class="w-full h-full object-cover" data-alt="A futuristic laboratory setting with gleaming chrome and glass surfaces." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFogDXotRpGGTCq8bE1--oEQUAtOTa420IePPTEhQTGRQt-0wn5HPJ1IejW3vl5vnGWK-JGcle-yrsV6kgt9-CcdxK4KPP4kx9ZhmRnigGWZTh_jXhuUcIeKzwKB41afGxiht1PCAZ6gKntyOqBWrqgBCOpUQ8Yi9Z4y0Q3aeh9FMg7zXAZNHr0d3bHhp7AjDVSEBllvlSraTf6GsczQ-0rPNbOC8_5ObC4Jgx-4BXQQtzKls-SS93mhGN0n_OY_41TR5sXi0ZFKv7"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Status / Trust Section -->
+<section class="grid grid-cols-1 sm:grid-cols-3 gap-md py-xl">
+<div class="bg-white border border-slate-100 rounded-2xl p-lg text-center shadow-sm hover:shadow-md transition-shadow">
+<div class="text-secondary font-headline-xl text-headline-xl mb-xs">15k+</div>
+<div class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest">Properties Cleared</div>
+</div>
+<div class="bg-white border border-slate-100 rounded-2xl p-lg text-center shadow-sm hover:shadow-md transition-shadow">
+<div class="text-primary-container font-headline-xl text-headline-xl mb-xs">100%</div>
+<div class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest">Safety Record</div>
+</div>
+<div class="bg-white border border-slate-100 rounded-2xl p-lg text-center shadow-sm hover:shadow-md transition-shadow">
+<div class="text-secondary font-headline-xl text-headline-xl mb-xs">24h</div>
+<div class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest">Average Response</div>
+</div>
+</section>
+<!-- Emergency Banner -->
+<section class="mb-xl bg-gradient-to-r from-primary-container to-primary rounded-3xl p-lg md:p-xl flex flex-col md:flex-row items-center justify-between gap-lg relative overflow-hidden shadow-2xl">
+<div class="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl -mr-48 -mt-48"></div>
+<div class="relative z-10 text-white max-w-2xl text-center md:text-left">
+<h2 class="font-headline-lg text-headline-lg mb-sm">Immediate Infestation Support</h2>
+<p class="font-body-lg text-body-lg opacity-90">Spotted a serious issue? Our emergency response teams are on standby 24/7 for critical containment.</p>
+</div>
+<div class="relative z-10 w-full md:w-auto">
+<button class="w-full bg-white text-primary-container font-black px-xl py-5 rounded-xl text-lg hover:bg-on-primary-fixed hover:text-white transition-all shadow-2xl active:scale-95 flex items-center justify-center gap-3">
+<span class="material-symbols-outlined">call</span>
+                    Call Emergency Line
+                </button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-900 text-white pt-xl">
+<div class="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-4 gap-12 pb-xl border-b border-white/10">
+<div class="col-span-1 md:col-span-1">
+<img alt="efumes! logo" class="h-14 mb-6 brightness-0 invert" src="https://lh3.googleusercontent.com/aida/ADBb0uixOX0u0hu19FfDQCgmnDTm0u0hgbnHqhbOYwJsR12dPX0sP96DbIvnmabgD646Dc3Kz1N-kdEXCyMeO8GVR6Oi-zXRJ_77LW8fc40SqUQnNI_wYCAEFEDbIdEk0fueQEaDepwpKHBecTsCYmZYMatAkWwC0YFjo0tDRpmzjWcnxnTKB6rq7mdFcgs9-IcP6p8GdgfDZK51flBmxhvU5NxXTpoV7I4n6dUxvicNV3vdDxbFglQNDzlj7PXFjHGqz5k3Ru_ISaDS"/>
+<p class="font-body-md text-slate-400 mb-8 max-w-xs leading-relaxed">Professional pest management with a focus on human safety, clinical precision, and environmental responsibility.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-primary-container hover:border-primary-container transition-all" href="#">
+<span class="material-symbols-outlined text-white" data-icon="public">public</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-primary-container hover:border-primary-container transition-all" href="#">
+<span class="material-symbols-outlined text-white" data-icon="mail">mail</span>
+</a>
+</div>
+</div>
+<div>
+<h4 class="font-bold text-lg mb-6 text-white border-b border-primary-container w-fit pr-4 pb-1">Our Services</h4>
+<ul class="space-y-4">
+<li><a class="text-slate-400 hover:text-primary-container transition-colors" href="#">Residential Shield</a></li>
+<li><a class="text-slate-400 hover:text-primary-container transition-colors" href="#">Commercial Strategy</a></li>
+<li><a class="text-slate-400 hover:text-primary-container transition-colors" href="#">Termite Protection</a></li>
+<li><a class="text-slate-400 hover:text-primary-container transition-colors" href="#">Industrial Fumigation</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-lg mb-6 text-white border-b border-primary-container w-fit pr-4 pb-1">Resources</h4>
+<ul class="space-y-4">
+<li><a class="text-slate-400 hover:text-primary-container transition-colors" href="#">Safety Protocols</a></li>
+<li><a class="text-slate-400 hover:text-primary-container transition-colors" href="#">Pest Library</a></li>
+<li><a class="text-slate-400 hover:text-primary-container transition-colors" href="#">Pricing Plans</a></li>
+<li><a class="text-slate-400 hover:text-primary-container transition-colors" href="#">Contact Support</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-lg mb-6 text-white border-b border-primary-container w-fit pr-4 pb-1">Emergency Help</h4>
+<div class="bg-white/5 border border-white/10 p-6 rounded-2xl backdrop-blur-sm">
+<p class="text-xs text-slate-400 uppercase tracking-widest mb-2 font-bold">Priority Support Line</p>
+<p class="text-2xl font-bold text-primary-container mb-4">1-800-EFUMES-0</p>
+<p class="text-sm text-slate-500 italic">Available 24/7 for critical infestation responses.</p>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-6 md:px-12 py-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-caption text-caption text-slate-500">© 2024 efumes! Pest Control. Clinical Precision in Pest Management.</p>
+<div class="flex gap-6">
+<a class="text-xs text-slate-500 hover:text-white transition-colors" href="#">Privacy Policy</a>
+<a class="text-xs text-slate-500 hover:text-white transition-colors" href="#">Terms of Service</a>
+<a class="text-xs text-slate-500 hover:text-white transition-colors" href="#">Accessibility</a>
+</div>
+</div>
+</footer>
+</body></html>

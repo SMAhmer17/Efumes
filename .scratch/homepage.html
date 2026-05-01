@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>efumes! - Precision Pest Management</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed": "#2f1500",
+                    "primary": "#914c00",
+                    "on-primary": "#ffffff",
+                    "inverse-on-surface": "#f0f1f2",
+                    "on-error": "#ffffff",
+                    "outline": "#887364",
+                    "primary-container": "#f38d2c",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary-container": "#403b3c",
+                    "tertiary-fixed": "#e9e0e1",
+                    "secondary-container": "#76fd98",
+                    "surface": "#f8f9fa",
+                    "on-secondary-container": "#007435",
+                    "surface-variant": "#e1e3e4",
+                    "on-tertiary-fixed": "#1e1b1c",
+                    "tertiary-fixed-dim": "#cdc4c5",
+                    "primary-fixed-dim": "#ffb77e",
+                    "surface-container": "#edeeef",
+                    "on-error-container": "#93000a",
+                    "inverse-surface": "#2e3132",
+                    "secondary": "#006d31",
+                    "secondary-fixed": "#76fd98",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary-container": "#5e3000",
+                    "inverse-primary": "#ffb77e",
+                    "on-secondary-fixed": "#00210a",
+                    "error": "#ba1a1a",
+                    "background": "#f8f9fa",
+                    "surface-container-high": "#e7e8e9",
+                    "surface-container-highest": "#e1e3e4",
+                    "on-background": "#191c1d",
+                    "tertiary-container": "#aca5a6",
+                    "on-primary-fixed-variant": "#6e3900",
+                    "on-surface": "#191c1d",
+                    "secondary-fixed-dim": "#58e07f",
+                    "on-surface-variant": "#554336",
+                    "on-tertiary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "surface-tint": "#914c00",
+                    "outline-variant": "#dbc2b0",
+                    "on-secondary-fixed-variant": "#005323",
+                    "surface-bright": "#f8f9fa",
+                    "tertiary": "#635d5e",
+                    "surface-dim": "#d9dadb",
+                    "on-tertiary-fixed-variant": "#4b4546",
+                    "surface-container-low": "#f3f4f5",
+                    "primary-fixed": "#ffdcc3"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "xs": "4px",
+                    "gutter": "24px",
+                    "xl": "80px",
+                    "md": "24px",
+                    "sm": "12px",
+                    "base": "8px",
+                    "lg": "48px",
+                    "margin": "32px"
+            },
+            "fontFamily": {
+                    "headline-xl": ["Public Sans"],
+                    "body-md": ["Public Sans"],
+                    "headline-lg": ["Public Sans"],
+                    "body-lg": ["Public Sans"],
+                    "label-md": ["Public Sans"],
+                    "headline-md": ["Public Sans"],
+                    "caption": ["Public Sans"]
+            },
+            "fontSize": {
+                    "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "caption": ["12px", {"lineHeight": "16px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+    </style>
+</head>
+<body class="bg-background font-body-md text-on-surface antialiased">
+<!-- TopNavBar -->
+<nav class="sticky top-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm font-['Public_Sans'] antialiased">
+<div class="flex justify-between items-center px-6 md:px-12 py-3 max-w-7xl mx-auto">
+<div class="flex items-center">
+<img alt="efumes! logo" class="h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0uixOX0u0hu19FfDQCgmnDTm0u0hgbnHqhbOYwJsR12dPX0sP96DbIvnmabgD646Dc3Kz1N-kdEXCyMeO8GVR6Oi-zXRJ_77LW8fc40SqUQnNI_wYCAEFEDbIdEk0fueQEaDepwpKHBecTsCYmZYMatAkWwC0YFjo0tDRpmzjWcnxnTKB6rq7mdFcgs9-IcP6p8GdgfDZK51flBmxhvU5NxXTpoV7I4n6dUxvicNV3vdDxbFglQNDzlj7PXFjHGqz5k3Ru_ISaDS"/>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-primary-container font-bold border-b-2 border-primary-container pb-1 hover:text-primary-container transition-all duration-200 active:scale-95" href="#">Home</a>
+<a class="text-slate-600 font-medium hover:text-primary-container transition-all duration-200 active:scale-95" href="#">Services</a>
+<a class="text-slate-600 font-medium hover:text-primary-container transition-all duration-200 active:scale-95" href="#">Safety</a>
+<a class="text-slate-600 font-medium hover:text-primary-container transition-all duration-200 active:scale-95" href="#">About Us</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="bg-primary-container text-white px-6 py-2 rounded-lg font-bold shadow-md hover:brightness-105 transition-all duration-150 active:scale-95">Book Now</button>
+</div>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative overflow-hidden bg-surface-container-low pt-xl pb-lg">
+<div class="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="z-10">
+<span class="inline-block px-4 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-md text-label-md mb-md uppercase tracking-wide">
+                        CLINICAL PRECISION IN PEST CONTROL
+                    </span>
+<h1 class="font-headline-xl text-headline-xl text-on-surface mb-md">
+                        Protecting Your Home with <span class="text-primary-container">Scientific Precision</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-lg max-w-xl leading-relaxed">
+                        Expert-led fumigation and pest management tailored for safety, speed, and total eradication. Our certified technicians use eco-friendly clinical methods to restore your peace of mind.
+                    </p>
+<div class="flex flex-wrap gap-6">
+<button class="bg-primary-container text-white px-10 py-4 rounded-xl font-headline-md text-headline-md shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all active:scale-95 duration-150">
+                            Book a Free Inspection
+                        </button>
+<button class="border-2 border-secondary text-secondary px-10 py-4 rounded-xl font-headline-md text-headline-md hover:bg-secondary/5 transition-all active:scale-95 duration-150">
+                            Our Method
+                        </button>
+</div>
+</div>
+<div class="relative">
+<div class="aspect-square rounded-3xl overflow-hidden shadow-2xl border-8 border-white">
+<img class="w-full h-full object-cover" data-alt="A professional pest control technician wearing high-grade protective clinical gear and a specialized face mask, standing confidently in a clean, modern domestic setting. The technician holds a precision applicator, bathed in bright, soft natural light that emphasizes cleanliness and professional reliability. The color palette features vibrant orange accents against a sterile white and green-tinted background, conveying safe power and scientific expertise." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKElyii6d9RfzVc28o_E3Uebt1wBUv7GIJ4m8Y-tCnduu12Br-onDB0FMaZ0opK0KhK2ipTYk3qVs7UH1DNhaJ80QrVHRAWsYptEIXjbA_9jbjC2H0dixqyRckyq6rDQCM-CymckvS5P9pLIUATTNX7_N9JFEyQJTfVasAZXBd0cRkRvoNMZznU2vttZOAFxfjiCVCU0hAQC4Jw2lnGqT_2lW4KxYy2xYz9jJz0alVvEnbN7QGtyWvgV2cn_6wcMt5KKL9yrOyxrbk"/>
+</div>
+<div class="absolute -bottom-8 -left-8 bg-white p-6 rounded-2xl shadow-2xl border border-slate-100 max-w-xs transform hover:-rotate-2 transition-transform duration-300">
+<div class="flex items-center gap-3 mb-2">
+<span class="material-symbols-outlined text-primary-container" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface">Certified Safe</span>
+</div>
+<p class="font-caption text-caption text-slate-500">100% satisfaction guarantee with our signature clinical eradication protocol.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Our Core Services -->
+<section class="py-xl bg-white">
+<div class="max-w-7xl mx-auto px-6 md:px-12">
+<div class="mb-lg">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-xs">Our Core Services</h2>
+<p class="text-on-surface-variant max-w-2xl text-lg">Targeted solutions designed for maximum efficiency and minimal disruption to your daily life.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="group bg-surface-container-lowest rounded-2xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-2xl transition-all duration-300 p-8">
+<div class="w-16 h-16 rounded-2xl bg-primary-container/10 flex items-center justify-center mb-md group-hover:bg-primary-container group-hover:text-white transition-all duration-300">
+<span class="material-symbols-outlined text-3xl">pest_control</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-sm">Termite Eradication</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-lg leading-relaxed">Deep-soil clinical treatment and structural shielding to eliminate colonies at their source.</p>
+<a class="text-primary font-bold flex items-center gap-2 group-hover:gap-4 transition-all" href="#">
+                            Learn more <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+<!-- Card 2 -->
+<div class="group bg-surface-container-lowest rounded-2xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-2xl transition-all duration-300 p-8">
+<div class="w-16 h-16 rounded-2xl bg-secondary/10 flex items-center justify-center mb-md group-hover:bg-secondary group-hover:text-white transition-all duration-300">
+<span class="material-symbols-outlined text-3xl">thermostat</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-sm">Bed Bug Thermal</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-lg leading-relaxed">Chemical-free heat remediation technology that penetrates every crack and crevice.</p>
+<a class="text-secondary font-bold flex items-center gap-2 group-hover:gap-4 transition-all" href="#">
+                            Learn more <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+<!-- Card 3 -->
+<div class="group bg-surface-container-lowest rounded-2xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-2xl transition-all duration-300 p-8">
+<div class="w-16 h-16 rounded-2xl bg-primary-container/10 flex items-center justify-center mb-md group-hover:bg-primary-container group-hover:text-white transition-all duration-300">
+<span class="material-symbols-outlined text-3xl">block</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-sm">Rodent Exclusion</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-lg leading-relaxed">Strategic structural sealing and humane management systems for long-term protection.</p>
+<a class="text-primary font-bold flex items-center gap-2 group-hover:gap-4 transition-all" href="#">
+                            Learn more <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Choose Us (Bento Grid) -->
+<section class="py-xl bg-surface-container-lowest">
+<div class="max-w-7xl mx-auto px-6 md:px-12">
+<div class="text-center mb-lg">
+<h2 class="font-headline-lg text-headline-lg mb-xs">Why Choose efumes!</h2>
+<p class="text-on-surface-variant text-lg">The standard for professional-grade pest management.</p>
+</div>
+<div class="bento-grid">
+<div class="col-span-12 lg:col-span-8 bg-white rounded-3xl p-lg flex flex-col md:flex-row items-center gap-8 border border-slate-100 shadow-sm">
+<div class="md:w-1/2">
+<h3 class="font-headline-md text-headline-md mb-sm">Industrial Power, Household Safety</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">Our formulas are rigorously tested to ensure they are lethal to pests while remaining completely safe for children and pets once treatment is completed.</p>
+</div>
+<div class="md:w-1/2 h-56 rounded-2xl overflow-hidden shadow-inner">
+<img class="w-full h-full object-cover" data-alt="A bright, minimalist interior of a modern family living room, featuring clean white surfaces and soft green plants. The room is flooded with warm afternoon sunlight, creating a safe and serene atmosphere. This visual reinforces the concept of a pest-free home environment where safety and clinical precision meet domestic comfort, styled with high-key lighting and a professional modern aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQfHQOrR1V-0cSRbM_IHh8nfZkXWPMasZHX2snMwZXXPokmRSWNKAwXSxmv0vtcwUQJXYHc6qRB8XrK2COi77_kaP4zfsci4MmV2AVKbW2LRGEN-_UBtJj24UiyhFQmV7GEAB8Y8MzvSaWxtT3QVcnvbIlf4_0GAVyhim2NPkp9NLCCG5GQ3zYQYHh6lviVPL0-m35dxBdk73RYsd8MX1aAo5C5RcnO-As7-XS_JuD_rDIC4fXAtCSTaHQJfTe_3zzjKvJ9BszceCG"/>
+</div>
+</div>
+<div class="col-span-12 lg:col-span-4 bg-primary-container text-white rounded-3xl p-lg flex flex-col justify-center shadow-lg relative overflow-hidden group">
+<div class="absolute -right-8 -top-8 bg-white/10 w-32 h-32 rounded-full transform group-hover:scale-150 transition-transform duration-700"></div>
+<span class="material-symbols-outlined text-5xl mb-md">history</span>
+<h3 class="font-headline-md text-headline-md mb-sm">24-Hour Fast Response</h3>
+<p class="font-body-md text-body-md opacity-90 leading-relaxed">Emergencies don't wait. Neither do we. Our team is deployed within 24 hours of your initial contact.</p>
+</div>
+<div class="col-span-12 md:col-span-6 lg:col-span-4 bg-secondary-container/10 rounded-3xl p-lg border border-secondary-container/30">
+<h3 class="font-headline-md text-headline-md text-on-secondary-container mb-sm">Eco-Clinical Focus</h3>
+<p class="font-body-md text-body-md text-on-secondary-container/80 leading-relaxed">Using biology-first approaches to reduce environmental footprint without compromising on results.</p>
+</div>
+<div class="col-span-12 md:col-span-6 lg:col-span-8 bg-surface-container-high rounded-3xl p-lg flex items-center justify-between border border-slate-200">
+<div>
+<h3 class="font-headline-md text-headline-md mb-xs">Licensed &amp; Insured</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Fully compliant with state health and safety standards.</p>
+</div>
+<div class="hidden sm:flex gap-6">
+<div class="w-14 h-14 rounded-xl bg-white shadow-md flex items-center justify-center transform hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary-container text-3xl">verified_user</span>
+</div>
+<div class="w-14 h-14 rounded-xl bg-white shadow-md flex items-center justify-center transform hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary-container text-3xl">shield</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Success Stories -->
+<section class="py-xl relative">
+<div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+<div class="absolute top-0 right-0 w-1/3 h-1/3 bg-primary-container/5 blur-[120px] rounded-full"></div>
+<div class="absolute bottom-0 left-0 w-1/4 h-1/4 bg-secondary-container/10 blur-[100px] rounded-full"></div>
+</div>
+<div class="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+<h2 class="font-headline-lg text-headline-lg text-center mb-lg">Client Success Stories</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="bg-white/70 backdrop-blur-xl border border-white p-10 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="flex items-center gap-4 mb-md">
+<div class="w-14 h-14 rounded-full overflow-hidden bg-slate-200 border-2 border-primary-container/20">
+<img class="w-full h-full object-cover" data-alt="A professional headshot of a middle-aged male homeowner with a relaxed and satisfied expression, captured in soft outdoor lighting. The image has a clean, premium feel with a shallow depth of field, emphasizing a sense of relief and trust in professional services. The style is modern and high-end, aligned with a corporate yet approachable aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuBPmcyw0a-Ayc1TvS26Sk2dm8mr1i7xs7FOX97JxLYdNdmQ3PZ2mzKaV_uUTCM4zFl2lWEI-Y4rn3au6j6Xml1g4MIu_GNlURBf_p0p9BTaUCXn_MGTeARQpExbH1p4ggMfdiXUdF52w452yvJZSa4O3wozRrBktVkrqD43NWd8TYt1VD3YYSKkQvLSdWZN6iydRtjU35bNBnF_W9ueR4xnelaA4m_AjjsgDnvbK4P4_YZ_CcPbR4yJj5Cwx5Iz97l2vRmQNpg9Ja"/>
+</div>
+<div>
+<p class="font-bold text-lg">David Richardson</p>
+<p class="text-caption text-slate-500 uppercase tracking-wide">Residential Client</p>
+</div>
+</div>
+<div class="flex text-primary-container mb-sm">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="italic text-on-surface-variant font-body-lg leading-relaxed">"The level of professionalism from efumes! was outstanding. They handled our termite issue with surgical precision and explained every step of the clinical process. Highly recommended."</p>
+</div>
+<div class="bg-white/70 backdrop-blur-xl border border-white p-10 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="flex items-center gap-4 mb-md">
+<div class="w-14 h-14 rounded-full overflow-hidden bg-slate-200 border-2 border-primary-container/20">
+<img class="w-full h-full object-cover" data-alt="A professional headshot of a female business manager with a confident and friendly smile. The background is a slightly blurred, modern office space with bright natural lighting. The overall visual style is clinical, clean, and modern corporate, reflecting a professional business-to-business relationship built on reliability and expertise." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC881153VQdzxFjUx6y3bkmdsZQRQReLOF1Ra6yKesSMPHUbleFSalErcBZYRRN8bYBJ-kmohCJ4Xfr3pVc4UthOXNSU4mlpj6BhbnRVSiR62kz5_oBRe83RdBbd_PlE0yPhwYgGWvj2F-9A0_RxcreMG1YDtODbhU0GjFQNUczQWoGTYUdwOmQ5uKmNGtj0eG3xU64afxL8BvFxsjPj7BseoHqcXml9rx4Ru-BHQ2OBPNf3NYe6CLlxNJ7jBr8Imw4L_7Q2S7SI1Lp"/>
+</div>
+<div>
+<p class="font-bold text-lg">Sarah Chen</p>
+<p class="text-caption text-slate-500 uppercase tracking-wide">Commercial Manager</p>
+</div>
+</div>
+<div class="flex text-primary-container mb-sm">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="italic text-on-surface-variant font-body-lg leading-relaxed">"Maintaining our restaurant's hygiene standards is paramount. efumes!'s rodent exclusion plan was efficient and thorough. They are our go-to partner for facility sanitation."</p>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-xl bg-slate-900 text-white text-center relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-br from-primary-container/10 to-transparent"></div>
+<div class="max-w-4xl mx-auto px-6 relative z-10">
+<h2 class="font-headline-xl text-headline-xl mb-md">Ready to Reclaim Your Space?</h2>
+<p class="font-body-lg text-body-lg opacity-80 mb-lg max-w-2xl mx-auto leading-relaxed">Join thousands of homeowners and businesses who trust efumes! for clinical-grade pest eradication.</p>
+<div class="flex flex-col sm:flex-row gap-6 justify-center">
+<button class="bg-primary-container text-white px-10 py-5 rounded-xl font-bold shadow-2xl hover:scale-105 transition-all duration-150">
+                        Schedule Online
+                    </button>
+<button class="bg-white/5 border border-white/20 backdrop-blur-sm px-10 py-5 rounded-xl font-bold hover:bg-white hover:text-slate-900 transition-all duration-150">
+                        Call (800) EFUMES-NOW
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface pt-16 pb-8 font-['Public_Sans']">
+<div class="max-w-7xl mx-auto px-6 md:px-12">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-16">
+<!-- Branding & Newsletter -->
+<div class="lg:col-span-5">
+<img alt="efumes! logo" class="h-10 w-auto object-contain mb-6" src="https://lh3.googleusercontent.com/aida/ADBb0uixOX0u0hu19FfDQCgmnDTm0u0hgbnHqhbOYwJsR12dPX0sP96DbIvnmabgD646Dc3Kz1N-kdEXCyMeO8GVR6Oi-zXRJ_77LW8fc40SqUQnNI_wYCAEFEDbIdEk0fueQEaDepwpKHBecTsCYmZYMatAkWwC0YFjo0tDRpmzjWcnxnTKB6rq7mdFcgs9-IcP6p8GdgfDZK51flBmxhvU5NxXTpoV7I4n6dUxvicNV3vdDxbFglQNDzlj7PXFjHGqz5k3Ru_ISaDS"/>
+<p class="text-slate-500 text-body-md mb-8 max-w-sm leading-relaxed">
+                        Setting the global standard for professional-grade pest management. Clinical precision, household safety, and 100% eradication.
+                    </p>
+<div class="space-y-4">
+<p class="font-bold text-on-surface">Stay protected</p>
+<form class="flex gap-2 max-w-md">
+<input class="flex-1 bg-white border border-slate-200 rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary-container transition-all" placeholder="Email address" type="email"/>
+<button class="bg-primary-container text-white px-6 py-3 rounded-lg font-bold hover:brightness-105 transition-all">
+                                Join
+                            </button>
+</form>
+</div>
+</div>
+<!-- Quick Links -->
+<div class="lg:col-span-7 grid grid-cols-2 sm:grid-cols-3 gap-8">
+<div>
+<h4 class="font-bold text-on-surface mb-6 uppercase tracking-widest text-xs">Services</h4>
+<ul class="space-y-4">
+<li><a class="text-slate-500 hover:text-primary-container transition-colors" href="#">Residential</a></li>
+<li><a class="text-slate-500 hover:text-primary-container transition-colors" href="#">Commercial</a></li>
+<li><a class="text-slate-500 hover:text-primary-container transition-colors" href="#">Eco-Friendly</a></li>
+<li><a class="text-slate-500 hover:text-primary-container transition-colors" href="#">Thermal Treatment</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-on-surface mb-6 uppercase tracking-widest text-xs">Company</h4>
+<ul class="space-y-4">
+<li><a class="text-slate-500 hover:text-primary-container transition-colors" href="#">Our Story</a></li>
+<li><a class="text-slate-500 hover:text-primary-container transition-colors" href="#">Safety Protocols</a></li>
+<li><a class="text-slate-500 hover:text-primary-container transition-colors" href="#">Certifications</a></li>
+<li><a class="text-slate-500 hover:text-primary-container transition-colors" href="#">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-on-surface mb-6 uppercase tracking-widest text-xs">Connect</h4>
+<div class="grid grid-cols-3 gap-3 max-w-[140px]">
+<a class="w-10 h-10 rounded-full bg-white shadow-sm border border-slate-100 flex items-center justify-center text-slate-600 hover:bg-primary-container hover:text-white hover:border-primary-container transition-all" href="#" title="Instagram">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+</a>
+<a class="w-10 h-10 rounded-full bg-white shadow-sm border border-slate-100 flex items-center justify-center text-slate-600 hover:bg-primary-container hover:text-white hover:border-primary-container transition-all" href="#" title="Facebook">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path></svg>
+</a>
+<a class="w-10 h-10 rounded-full bg-white shadow-sm border border-slate-100 flex items-center justify-center text-slate-600 hover:bg-primary-container hover:text-white hover:border-primary-container transition-all" href="#" title="LinkedIn">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"></path></svg>
+</a>
+<a class="w-10 h-10 rounded-full bg-white shadow-sm border border-slate-100 flex items-center justify-center text-slate-600 hover:bg-primary-container hover:text-white hover:border-primary-container transition-all" href="#" title="Email">
+<span class="material-symbols-outlined text-xl">mail</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-white shadow-sm border border-slate-100 flex items-center justify-center text-slate-600 hover:bg-primary-container hover:text-white hover:border-primary-container transition-all" href="#" title="WhatsApp">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-8 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-slate-400 text-sm">© 2024 efumes! Pest Control. Clinical Precision in Pest Management.</p>
+<div class="flex gap-6 text-sm">
+<a class="text-slate-400 hover:text-on-surface transition-colors" href="#">Privacy Policy</a>
+<a class="text-slate-400 hover:text-on-surface transition-colors" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
